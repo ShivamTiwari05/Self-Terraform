@@ -47,3 +47,13 @@ resource "aws_eks_cluster" "demo-eks-cluster" {
     }
     depends_on = [ aws_iam_role_policy_attachment.eks_cluster_policy ]
 }
+
+
+
+# while creating the cluster in EKS, these are the things which are considered:
+
+#IRSA : which allow pods to access resources
+
+#additional access points = which allows other IAM roles/Users to access your cluster.
+
+#Endpoint Private & public access in EKS resource = to provode access to your cluster in vpc and outside VPC resp.
